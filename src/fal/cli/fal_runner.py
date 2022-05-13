@@ -1,6 +1,6 @@
 import argparse
 from pathlib import Path
-from typing import Any, Dict, List
+from typing import List
 import os
 
 from dbt.config.profile import DEFAULT_PROFILES_DIR
@@ -36,6 +36,7 @@ def create_fal_dbt(args: argparse.Namespace) -> FalDbt:
         args.threads,
         real_state,
         args.target,
+        args.vars,
     )
 
 
